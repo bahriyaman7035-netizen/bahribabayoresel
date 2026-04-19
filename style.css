@@ -1,0 +1,451 @@
+/* =======================================
+   GENEL STİL – DOĞAL, SADE, UYUMLU TEMA
+======================================= */
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f7f1e8;
+  color: #3e3a33;
+}
+
+/* =======================================
+   ÜST LOGO ALANI
+======================================= */
+.bb-header-center {
+  background: #fff;
+  padding: 18px 0;
+  text-align: center;
+  border-bottom: 1px solid #e6dcca;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bb-logo-center {
+  width: 160px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.bb-logo-center:hover {
+  transform: scale(1.04);
+}
+
+/* =======================================
+   HERO SLIDER ALANI
+======================================= */
+.bb-hero {
+  padding: 18px 0 10px;
+}
+
+.bb-hero-slider {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  background: #d8c8b2;
+}
+
+.bb-hero-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bb-hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  border-radius: 22px;
+}
+
+.bb-hero-slide.active {
+  opacity: 1;
+}
+
+/* OKLAR */
+.bb-hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease;
+}
+
+.bb-hero-arrow:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.bb-hero-prev { left: 14px; }
+.bb-hero-next { right: 14px; }
+
+/* SLIDER NOKTALARI */
+.bb-hero-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 11;
+}
+
+.bb-hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bb-hero-dot.active {
+  background: #f5e3b0;
+  border-color: #f5e3b0;
+}
+
+/* =======================================
+   ÜRÜN KATEGORİLERİ
+======================================= */
+.bb-products {
+  max-width: 1100px;
+  margin: 40px auto 60px;
+  text-align: center;
+}
+
+.bb-products-title {
+  font-size: 26px;
+  margin-bottom: 28px;
+  color: #3e3a33;
+  font-weight: 600;
+}
+
+.bb-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  justify-items: center;
+}
+
+.bb-product.last-row:nth-child(10) {
+  grid-column: 1 / 2; /* 10. ürünü solda tutar */
+}
+
+.bb-product.last-row:nth-child(11) {
+  grid-column: 3 / 4; /* 11. ürünü sağda tutar */
+}
+
+.bb-product {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  width: 100%;
+  max-width: 320px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.bb-product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.bb-product img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.bb-product h3 {
+  font-size: 17px;
+  color: #2f261b;
+  margin: 6px 0 4px;
+}
+
+.bb-product p {
+  font-size: 14px;
+  color: #5a4c3a;
+  margin: 0;
+}
+
+/* =======================================
+   ALT BİLGİ (FOOTER)
+======================================= */
+.bb-footer {
+  background: #f2e8d8;
+  padding: 30px 0 10px;
+  margin-top: 40px;
+  border-top: 1px solid #e0d4be;
+  color: #3e3a33;
+  font-size: 15px;
+}
+
+.bb-footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bb-footer-logo img {
+  width: 90px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.bb-footer-contact p {
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+.bb-footer-slogan {
+  font-style: italic;
+  max-width: 260px;
+}
+
+.bb-footer-bottom {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 13px;
+  color: #7a7469;
+}
+
+/* =======================================
+   SABİT WHATSAPP BUTONU
+======================================= */
+.bb-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bb-whatsapp img {
+  width: 34px;
+  height: 34px;
+  filter: brightness(0) invert(1);
+}
+
+.bb-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* =======================================
+   ÜRÜN DETAY SAYFASI
+======================================= */
+.urun-detay {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.urun-gorsel img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  object-fit: cover;
+}
+
+.urun-bilgi h1 {
+  margin-top: 0;
+  color: #3c2b17;
+  font-size: 26px;
+}
+
+.urun-bilgi h3 {
+  color: #7b4a2b;
+  font-size: 18px;
+  margin-top: 16px;
+}
+
+.urun-bilgi p {
+  line-height: 1.6;
+}
+
+/* === YORUM SİSTEMİ === */
+#yorumlar {
+  background: #fffaf2;
+  padding: 40px 20px 60px;
+  text-align: center;
+  border-top: 1px solid #e6dcca;
+}
+
+#yorumlar h2 {
+  color: #3c2b17;
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+#yorumFormu {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#yorumFormu input,
+#yorumFormu textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d8c8b2;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  resize: none;
+}
+
+#yorumFormu button {
+  background: #d8b97f;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#yorumFormu button:hover {
+  background: #c79a4a;
+}
+
+#yorumListesi {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.yorum {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.yorum strong {
+  color: #7b4a2b;
+}
+
+#yorumListesi .yorum p {
+  margin: 6px 0 0;
+  color: #4a4032;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* === ÜRÜN GÖRSELLERİ GALERİSİ (ürün sayfası için) === */
+#urun-galerisi {
+  background: #f9f6ef;
+  padding: 40px 20px 60px;
+  text-align: center;
+}
+
+#urun-galerisi h2 {
+  color: #3c2b17;
+  font-size: 22px;
+  margin-bottom: 26px;
+}
+
+/* küçük kare ya da yatay dikdörtgen düzen */
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* Görselleri orantılı küçült – düzgün görünüm */
+.galeri-grid img {
+  width: 100%;
+  height: 200px;              /* önce 180’di, 200 biraz daha dengeli */
+  object-fit: cover;          /* taşma olmadan doldurur */
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.galeri-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* mobilde 1 veya 2 sütuna düşür */
+@media (max-width: 768px) {
+  .galeri-grid img {
+    height: 160px;
+  }
+}
+
+
+/* =======================================
+   MOBİL UYUMLU TASARIM
+======================================= */
+@media (max-width: 768px) {
+  .bb-logo-center { width: 120px; }
+
+  .bb-hero { padding: 0 14px; }
+  .bb-hero-slider { border-radius: 18px; }
+  .bb-hero-arrow { width: 34px; height: 34px; font-size: 18px; }
+
+  .bb-products-grid { grid-template-columns: 1fr; gap: 20px; }
+  .bb-product { width: 90%; }
+
+  .urun-detay { grid-template-columns: 1fr; text-align: center; }
+  .urun-gorsel img { max-width: 100%; }
+
+  .bb-footer-content { flex-direction: column; align-items: center; gap: 18px; }
+  .bb-footer { font-size: 14px; padding: 24px 0 8px; }
+  .bb-footer-logo img { width: 80px; }
+}
