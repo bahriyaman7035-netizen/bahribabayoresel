@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ermenek Üzüm Pekmezi – Bahri Baba Yöresel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- 🟤 ÜST LOGO -->
+  <header class="bb-header-center">
+    <img src="https://i.imgur.com/cYkom0Q.jpeg" alt="Bahri Baba Yöresel Logo" class="bb-logo-center">
+  </header>
+
+  <!-- 🟤 ÜRÜN DETAY -->
+  <section class="urun-detay">
+
+    <!-- Sol tarafta ürün görseli -->
+    <div class="urun-gorsel">
+      <img src="https://i.ibb.co/HyK3rGG/Whats-App-mage-2025-11-27-at-21-34-22.jpg" alt="Ermenek Üzüm Pekmezi">
+    </div>
+
+    <!-- Sağ tarafta ürün açıklaması -->
+    <div class="urun-bilgi">
+      <h1>Ermenek Üzüm Pekmezi</h1>
+      <h3>Toros Dağlarının Üzümünden Doğal Pekmez</h3>
+      <p>
+        Ermenek’in verimli bağlarından toplanan üzümler, geleneksel yöntemlerle kaynatılarak katkısız ve saf pekmez haline getirilir. 
+        İçeriğinde yalnızca üzüm bulunur — şeker, katkı veya koruyucu içermez.  
+        Soğuk kış günlerinde enerji kaynağı, sabah kahvaltılarında ise doğal tatlı alternatifi olarak idealdir.
+      </p>
+      <p><strong>Net Miktar:</strong> 1 kg.</p>
+      <p><strong>Menşei:</strong> Ermenek / Karaman</p>
+    </div>
+  </section>
+
+  <!-- YORUM SİSTEMİ -->
+<section id="yorumlar">
+  <h2>Yorumlar</h2>
+
+  <form id="yorumFormu">
+    <input type="text" id="isim" placeholder="Adınızı giriniz" required>
+    <textarea id="yorumMetni" rows="4" placeholder="Yorumunuzu yazınız..." required></textarea>
+    <button type="submit">Gönder</button>
+  </form>
+
+  <div id="yorumListesi"></div>
+</section>
+  
+  <script>
+  const form = document.getElementById("yorumFormu");
+  const liste = document.getElementById("yorumListesi");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const isim = document.getElementById("isim").value.trim();
+    const yorumMetni = document.getElementById("yorumMetni").value.trim();
+
+    if (isim && yorumMetni) {
+      const yorumDiv = document.createElement("div");
+      yorumDiv.classList.add("yorum");
+      yorumDiv.innerHTML = `<strong>${isim}</strong><p>${yorumMetni}</p>`;
+
+      liste.prepend(yorumDiv); // en üste ekler
+      form.reset();
+    }
+  });
+</script>
+
+  <!-- 🟤 ÜRÜN GÖRSELLERİ GALERİSİ -->
+  <section id="urun-galerisi">
+    <h2>Ermenek Üzüm Pekmezi Görselleri</h2>
+    <div class="galeri-grid">
+      <img src="https://i.imgur.com/UHH1xvk.jpeg" alt="Pekmez sunumu 1">
+      <img src="https://i.imgur.com/UHH1xvk.jpeg" alt="Ermenek üzüm pekmezi kavanoz">
+      <img src="https://i.imgur.com/UHH1xvk.jpeg" alt="Doğal pekmez üretimi">
+      <img src="https://i.imgur.com/UHH1xvk.jpeg" alt="Yöresel ürün masası">
+    </div>
+  </section>
+
+  <!-- 🟤 ALT BİLGİ -->
+  <footer class="bb-footer">
+    <div class="bb-footer-content">
+      <div class="bb-footer-logo">
+        <img src="https://i.imgur.com/cYkom0Q.jpeg" alt="Bahri Baba Küçük Logo">
+      </div>
+
+      <div class="bb-footer-contact">
+        <p><strong>İletişim:</strong></p>
+        <p>📞 0 (507) 448 68 76</p>
+        <p>📧 byaman_35@hotmail.com</p>
+        <p>📍 Ermenek / Karaman</p>
+      </div>
+
+      <div class="bb-footer-slogan">
+        <p>Toros dağlarının güney yamaçlarından,<br> Taşeli yaylalarından doğal ürünlerimi sunuyorum.</p>
+      </div>
+    </div>
+
+    <div class="bb-footer-bottom">
+      © 2025 Bahri Baba Yöresel. Tüm hakları saklıdır.
+    </div>
+  </footer>
+
+  <!-- 🟢 WHATSAPP -->
+  <a href="https://wa.me/905074486876" class="bb-whatsapp" target="_blank" aria-label="WhatsApp üzerinden iletişime geç">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/WhatsApp_Logo_green.svg/960px-WhatsApp_Logo_green.svg.png" alt="WhatsApp">
+  </a>
+
+</body>
+</html>
