@@ -152,14 +152,6 @@ body {
   justify-items: stretch;
 }
 
-.bb-product.last-row:nth-child(10) {
-  grid-column: 1 / 2; /* 10. ürünü solda tutar */
-}
-
-.bb-product.last-row:nth-child(11) {
-  grid-column: 3 / 4; /* 11. ürünü sağda tutar */
-}
-
 .bb-product {
   background: #fff;
   border-radius: 18px;
