@@ -180,7 +180,7 @@ body {
 
 .bb-product img {
   width: 100%;
-  height: 500px;
+  aspect-ratio: 4/5;
   object-fit: cover;
   object-position: center;
   border-radius: 14px;
