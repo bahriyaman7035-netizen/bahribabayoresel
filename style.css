@@ -437,6 +437,7 @@ body {
 ======================================= */
 @media (max-width: 768px) {
   .bb-logo-center { width: 120px; }
+  .bb-products { padding: 0 12px; }
 
   .bb-hero { padding: 0 14px; }
   .bb-hero-slider { border-radius: 18px; }
@@ -451,4 +452,5 @@ body {
   .bb-footer-content { flex-direction: column; align-items: center; gap: 18px; }
   .bb-footer { font-size: 14px; padding: 24px 0 8px; }
   .bb-footer-logo img { width: 80px; }
+  .bb-products-title { font-size: 22px; margin-bottom: 20px; }
 }
