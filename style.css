@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* =======================================
    GENEL STİL – DOĞAL, SADE, UYUMLU TEMA
 ======================================= */
@@ -445,9 +451,13 @@ body {
     height: 34px;
     font-size: 18px;
   }
-
-  .bb-products {
-    padding: 0 12px;
+    .bb-products {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 14px;
+    margin: 32px auto 50px;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .bb-products-title {
@@ -455,17 +465,28 @@ body {
     margin-bottom: 20px;
   }
 
-  .bb-products-grid {
+   .bb-products-grid {
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
+    width: 100%;
+    margin: 0;
     justify-items: stretch;
+    align-items: start;
   }
 
-  .bb-product {
+   .bb-product {
     width: 100%;
-    max-width: none;
+    max-width: 100%;
+    min-width: 0;
     padding: 12px;
+    box-sizing: border-box;
   }
+
+  .bb-product img {
+  width: 100%;
+  display: block;
+}
 
   .bb-product h3 {
     font-size: 15px;
