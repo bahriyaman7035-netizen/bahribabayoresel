@@ -424,15 +424,6 @@ body {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
-/* mobilde 1 veya 2 sütuna düşür */
-@media (max-width: 768px) {
-  .galeri-grid img {
-    height: 160px;
-    aspect-ratio: 4 / 5;
-  }
-}
-
-
 /* =======================================
    MOBİL UYUMLU TASARIM
 ======================================= */
@@ -441,6 +432,21 @@ body {
     width: 120px;
   }
 
+    #urun-galerisi .galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  #urun-galerisi .galeri-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  
   .bb-hero {
     padding: 0 14px;
   }
